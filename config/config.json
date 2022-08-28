@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "vishalsingh_21",
+    "password": "getonthetrainbaby",
+    "database": "ecommerce_18",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "vishalsingh_21",
+    "password": "getonthetrainbaby",
+    "database": "ecommerce_18",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "vishalsingh_21",
+    "password": "getonthetrainbaby",
+    "database": "ecommerce_18",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  }
+}
