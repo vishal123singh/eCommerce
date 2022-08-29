@@ -1,4 +1,7 @@
 const {Products, Sequelize} = require('../models');
+const pug = require('pug');
+const compiledFunction = pug.compileFile('template.pug');
+
 
 async function createProduct(req,res){
     const productData = req.body;
@@ -20,6 +23,7 @@ async function createProduct(req,res){
 async function getAllProducts(req,res){
     try{
         const result = await Products.findAll();
+        result = compiledFunction(JSON.parse(result));
         res.send(result);
     }
     catch(err){
