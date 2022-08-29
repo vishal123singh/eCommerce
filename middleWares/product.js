@@ -5,8 +5,8 @@ async function checkNameForProduct(req,res,next){
     const body = req.body;
 
     if(body.name){
-        if(body.categoryId){
-            const result = await Categories.findByPk(body.categoryId )
+        if(body.CategoryId){
+            const result = await Categories.findByPk(body.CategoryId )
             if(result){
                 next();
             }
