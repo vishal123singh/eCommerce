@@ -26,7 +26,7 @@ async function getAllProducts(req,res){
     try{
         const result = await Products.findAll();
         result=JSON.parse(result);
-        const output = render(template,{result:result});
+        const output = render(template,{result});
         res.send(output)
     }
     catch(err){
