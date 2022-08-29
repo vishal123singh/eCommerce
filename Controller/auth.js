@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const {User} = require('../models');
+// need to put process.env.JWT_SECRET_KEY in static format
 
 async function signUp(req,res){
 
@@ -49,7 +50,7 @@ async function signIn(req,res){
                 res.status(400).send({msg: 'Username/Password is not correct'});
             }
 
-            const token = await jwt.sign({id: user.id}, process.env.JWT_SECRET_KEY,{
+            const token = await jwt.sign({id: user.id},'lock n key' ,{
                 expiresIn:'1h'
             })
 
