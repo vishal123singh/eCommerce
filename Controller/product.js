@@ -8,8 +8,8 @@ async function createProduct(req,res){
     }
 
     try{
-        const {name,cost,description,quantity,categoryId}  = req.body;
-        const result = await Products.create({name,cost,description,quantity,categoryId});
+        const {name,cost,description,quantity,CategoryId}  = req.body;
+        const result = await Products.create({name,cost,description,quantity,CategoryId});
         res.send({msg : 'Product got created',result});
     }
     catch(err){
