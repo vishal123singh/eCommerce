@@ -22,7 +22,9 @@ async function createProduct(req,res){
 
 async function getAllProducts(req,res){
     try{
-        const products = await Products.findAll();
+        const products = await Products.findAll({
+            attributes:['id','name','cost','description','quantity','CategoryId']
+        });
         res.render('products',{products});
     }
     catch(err){
@@ -36,7 +38,8 @@ async function getProductById(req,res){
         const result = await Products.findOne({
             where : {
                 id : productId
-            }
+            },
+            attributes:['id','name','cost','description','quantity','CategoryId']
         });
 
         res.send(result);
