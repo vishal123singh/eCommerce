@@ -23,10 +23,10 @@ async function createProduct(req,res){
 async function getAllProducts(req,res){
     try{
         const products = await Products.findAll();
-        products= JSON.parse(products);
-        let data = templateCompiler({products});
+        
+        //let data = ;
 
-        res.send(data);
+        res.send(templateCompiler({products}));
     }
     catch(err){
         res.status(500).send({msg : 'Internal server error', err});
