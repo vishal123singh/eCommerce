@@ -13,8 +13,6 @@ app.use(categoryRoutes);
 app.use(productRoutes);
 app.use(cartRoutes);
 
-app.set('view engine', 'pug');
-app.set('views', './views');
 
 app.listen(Port,async ()=>{
     console.log(`Server is running on Port : ${Port}`);
