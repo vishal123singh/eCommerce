@@ -7,10 +7,8 @@ const {categoryRoutes,productRoutes,authRoutes, cartRoutes} = require('./Routes'
 
 const app = express();
 
-app.set('views','./views');
 app.set('view engine','pug');
-
-
+app.set('views','./views');
 
 app.use(express.json());
 app.use(authRoutes);
