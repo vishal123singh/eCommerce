@@ -6,10 +6,10 @@ const {Categories,Products,Role,sequelize} = require('./models');
 const {categoryRoutes,productRoutes,authRoutes, cartRoutes} = require('./Routes');
 
 const app = express();
-//const file=require('./templates/')
 
-app.set('view engine','pug');
 app.set('views','./views');
+app.set('view engine','pug');
+
 
 
 app.use(express.json());
