@@ -9,7 +9,7 @@ const app = express();
 //const file=require('./templates/')
 
 app.set('view engine','pug');
-app.set('views','./templates/products.pug');
+app.set('views','./templates');
 
 
 app.use(express.json());

@@ -23,8 +23,7 @@ async function createProduct(req,res){
 async function getAllProducts(req,res){
     try{
         const products = await Products.findAll();
-        
-        res.render(products);
+        res.render('products.pug',products);
     }
     catch(err){
         res.status(500).send({msg : 'Internal server error', err});
