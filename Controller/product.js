@@ -1,7 +1,5 @@
 const {Products, Sequelize} = require('../models');
-const pug = require('pug');
 
-const compiledFunction = pug.compileFile('../views/products.pug');
 
 async function createProduct(req,res){
     const productData = req.body;
@@ -23,9 +21,7 @@ async function createProduct(req,res){
 async function getAllProducts(req,res){
     try{
         const result = await Products.findAll();
-        let nums = [1, 2, 3, 4, 5];
-        let products = compiledFunction(nums);
-        res.send(products);
+        res.send(result);
     }
     catch(err){
         res.status(500).send({msg : 'Internal server error', err});

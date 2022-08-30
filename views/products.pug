@@ -1,3 +1,7 @@
 ul
-  each val in nums
-    li  val
+  each val in arr
+    li #{val} 
+
+ul
+  each val, index in arr2
+    li= index + ': ' + val
