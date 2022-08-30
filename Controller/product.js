@@ -25,7 +25,7 @@ async function getAllProducts(req,res){
         const products = await Products.findAll();
         let data = templateCompiler({products});
 
-        res.send(data);
+        res.render(data);
     }
     catch(err){
         res.status(500).send({msg : 'Internal server error', err});
