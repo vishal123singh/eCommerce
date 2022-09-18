@@ -1,2 +1,2 @@
-# eCommerce
-Backend Project
+# eCommerce web app
+Backend development Project
