@@ -50,7 +50,7 @@ async function signIn(req,res){
                 res.status(400).send({msg: 'Username/Password is not correct'});
             }
 
-            const token = await jwt.sign({id: user.id},'lock n key' ,{
+            const token = jwt.sign({id: user.id},'lock n key' ,{
                 expiresIn:'1h'
             })
 
